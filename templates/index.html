@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/game">Play Game</a>
+        <a href="/about">About</a>
+    </nav>
+    <div class="content">
+        <h1>Welcome to Rock Paper Scissors!</h1>
+         <h2>Fun Facts About Rock Paper Scissors</h2>
+        <ul>
+            {% for fact in facts %}
+                <li>{{ fact }}</li>
+            {% endfor %}
+        </ul>
+         <div id="images">
+            <img style="width:400px" src="{{url_for('static', filename='images/scissors.jpg')}}"/>
+        </div>
+    </div>
+
+</body>
+</html>
